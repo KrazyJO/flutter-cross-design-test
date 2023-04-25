@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:runmate_flutter/ct_scaffold.dart';
+import 'package:runmate_flutter/cross/ct_scaffold.dart';
 
 class Selection extends StatelessWidget {
   const Selection({super.key});

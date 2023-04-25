@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:runmate_flutter/GPTCounter.dart';
-import 'package:runmate_flutter/ct_app.dart';
-import 'package:runmate_flutter/ct_scaffold.dart';
+import 'package:runmate_flutter/cross/ct_app.dart';
+import 'package:runmate_flutter/cross/ct_scaffold.dart';
 
 void main() {
   runApp(const MyApp());

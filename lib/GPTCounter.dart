@@ -1,10 +1,9 @@
 import 'dart:io';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-
 import 'package:runmate_flutter/Selection.dart';
+import 'package:runmate_flutter/cross/ct_route.dart';
 
 class GPTCounter extends StatefulWidget {
   const GPTCounter({super.key});
@@ -97,12 +96,7 @@ class _GPTCounterState extends State<GPTCounter> {
   }
 
   void navToPage2() {
-    Route route;
-    if (Platform.isAndroid) {
-      route = MaterialPageRoute(builder: (context) => const Selection());
-    } else {
-      route = CupertinoPageRoute(builder: (context) => const Selection());
-    }
+    Route route = CTRoute.build((context) => const Selection());
     Navigator.of(context).push(route);
   }
 
