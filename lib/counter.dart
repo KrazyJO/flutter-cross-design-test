@@ -6,12 +6,18 @@ class Counter extends StatefulWidget {
   const Counter({Key? key}) : super(key: key);
 
   @override
-  _CounterState createState() => _CounterState();
+  State<Counter> createState() => _CounterState();
 }
 
 class _CounterState extends State<Counter> {
   Timer? _timer;
   int _counter = 0;
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +27,6 @@ class _CounterState extends State<Counter> {
         children: [
           Text(
             '$_counter',
-            style: Theme.of(context).textTheme.headline4,
           ),
         ],
       ),

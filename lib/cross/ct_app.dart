@@ -11,10 +11,10 @@ class CTApp extends StatelessWidget {
 
   const CTApp(
       {Key? key,
-      required this.home,
-      this.title = '',
-      this.primaryColor,
-      this.routes = const <String, WidgetBuilder>{}})
+        required this.home,
+        this.title = '',
+        this.primaryColor,
+        this.routes = const <String, WidgetBuilder>{}})
       : super(key: key);
 
   @override
@@ -32,13 +32,15 @@ class CTApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: primaryColor),
       home: home,
       routes: routes,
+      themeMode: ThemeMode.light,
     );
   }
 
   CupertinoApp _getCupertinoApp() {
     return CupertinoApp(
       title: title,
-      theme: CupertinoThemeData(primaryColor: primaryColor),
+      theme: CupertinoThemeData(
+          primaryColor: primaryColor, brightness: Brightness.light),
       home: home,
       routes: routes,
     );

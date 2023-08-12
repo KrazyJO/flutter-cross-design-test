@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:runmate_flutter/GPTCounter.dart';
+import 'package:runmate_flutter/gpt_counter.dart';
 import 'package:runmate_flutter/cross/ct_app.dart';
 import 'package:runmate_flutter/cross/ct_scaffold.dart';
 

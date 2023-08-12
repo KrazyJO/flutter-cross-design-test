@@ -7,7 +7,7 @@ class Selection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var children = <Widget>[];
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 10000; i++) {
       children.add(Text("item $i"));
     }
     return CTScaffold(
